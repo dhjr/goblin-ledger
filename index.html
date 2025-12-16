@@ -29,32 +29,42 @@
 
 <body>
     <div class="container">
-        <h1 class="title">TIME TO OBTAIN GEMS</h1>
+        <h1 class="title">TIME TO OBTAIN 
+            <img src="./resources/gem.png" class="gemIcon" alt="Gem Box icon">
+        </h1>
 
         <div class="parameters">
    
-            <label for="reqdNumOfGems" class="parameter">Required gems </label>
-            <input class="inputs" type="number" id = "reqdNumOfGems" min="0" placeholder="Required number of gems">
-            <span class ='err' id="err0">Invalid Number</span>
+            <div class="input-group">
+                <label for="reqdNumOfGems" class="parameter">Required <img src="./resources/gem.png" class="gemIconLabel" alt="gem"></label>
+                <input class="inputs" type="number" id = "reqdNumOfGems" min="0" placeholder="Required number of gems">
+                <span class ='err' id="err0">Invalid Number</span>
+            </div>
 
-            <label for="avlNumOfGems" class="parameter">Available Gems </label>
-            <input class="inputs" type="number" id = "avlNumOfGems" min="0" placeholder="Available number of gems">
-            <span class ='err' id="err1">Invalid Number</span>
+            <div class="input-group">
+                <label for="avlNumOfGems" class="parameter">Available <img src="./resources/gem.png" class="gemIconLabel" alt="gem"></label>
+                <input class="inputs" type="number" id = "avlNumOfGems" min="0" placeholder="Available number of gems">
+                <span class ='err' id="err1">Invalid Number</span>
+            </div>
                 
-            <label for="gemMineLevel" class="parameter">Gem Mine Level</label>
-            <input class="inputs" type="number" id = "gemMineLevel" min="0" max="10" placeholder="between 0 and 10">
-            <span class ='err' id="err2">Invalid Number</span>
+            <div class="input-group">
+                <label for="gemMineLevel" class="parameter">Gem Mine Level: <span id="gemMineDisplay">0</span></label>
+                <input class="inputs slider-input" type="range" id="gemMineLevel" min="0" max="10" value="0">
+                <span class ='err' id="err2">Invalid Number</span>
+            </div>
 
-            <label for="clockTowerLevel" class="parameter">Clock Tower Level</label>
-            <input class="inputs" type="number" id = "clockTowerLevel" min="0" max="10" placeholder="between 0 and 10">
-            <span class ='err' id="err3">Invalid Number</span>
+            <div class="input-group">
+                <label for="clockTowerLevel" class="parameter">Clock Tower Level: <span id="clockTowerDisplay">0</span></label>
+                <input class="inputs slider-input" type="range" id="clockTowerLevel" min="0" max="10" value="0">
+                <span class ='err' id="err3">Invalid Number</span>
+            </div>
             
 
         <div class = 'switch'>
 
             <div id="switch1" >
 
-                <p class="switchText">Do you clear home base obstacles regularly?</p>
+                <p class="switchText">Clear Home Obstacles?</p>
                 <div class = 'toggleSwitch' >
                     <label class="switch">
                         <input type="checkbox" id="homeBaseObstacleToggle" >
@@ -66,7 +76,7 @@
             
             <div id="switch2"  >
 
-                <p class="switchText">Do you clear builder baseobstacles regularly?</p>
+                <p class="switchText">Clear Builder Obstacles?</p>
                 <div class = 'toggleSwitch'>
                     <label class="switch">
                         <input type="checkbox" id="builderBaseObstacleToggle">

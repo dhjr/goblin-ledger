@@ -247,20 +247,20 @@ function mainFunction(val)
         let elements = document.querySelectorAll('.timeTaken');
         elements.forEach(function(element) 
         {
-            element.style.visibility = 'visible';
+            element.style.display = 'flex';
         });
 
         if(reqdGems <= avlGems) 
             {
                 resultTag.innerHTML = ("Time Taken:0 days");   
-                document.getElementById('timeTakenWithGb').style.visibility = 'hidden';
+                document.getElementById('timeTakenWithGb').style.display = 'none';
             }
             else
             {
                 let reqdTime = reqdTimeCalculate(val, reqdGems , avlGems);
                 let result = obtainTime(reqdTime);
 
-                if((result[0] === Infinity) || (result[0] ===NaN))
+                if((result[0] === Infinity) || (Number.isNaN(result[0])))
                 {
                     resultTag.innerHTML =`Time Taken: Infinite d`; 
                 }
@@ -268,7 +268,7 @@ function mainFunction(val)
                 {
                     resultTag.innerHTML =`Time Taken: ${result[0]}d ${result[1]}h ${result[2]}m ${result[3]}s`;
                 }
-                document.getElementById('timeTakenWithGb').style.visibility = 'visible';
+                document.getElementById('timeTakenWithGb').style.display = 'flex';
                 gemBoxCounter(val);
 
 
@@ -279,38 +279,40 @@ function mainFunction(val)
 
 
 const inputs = document.querySelector('.parameters');
-let val =[];
-inputs.addEventListener('input', (event)=>
-{
-    console.log('inputted')
-    if(event.target.classList.contains('inputs'))
-    {
+let val = [];
+
+// Initialize sliders to 0
+document.getElementById('gemMineDisplay').textContent = document.getElementById('gemMineLevel').value;
+document.getElementById('clockTowerDisplay').textContent = document.getElementById('clockTowerLevel').value;
+
+// Add specific listener for range updates
+inputs.addEventListener('input', (event) => {
+    // console.log('inputted');
+    
+    // Update display if it's a slider
+    if(event.target.id === 'gemMineLevel') {
+        document.getElementById('gemMineDisplay').textContent = event.target.value;
+    } else if(event.target.id === 'clockTowerLevel') {
+        document.getElementById('clockTowerDisplay').textContent = event.target.value;
+    }
+
+    if (event.target.classList.contains('inputs')) {
         let idOfElm = (event.target.id);
-        if(idOfElm==='reqdNumOfGems')
-        {
+        if (idOfElm === 'reqdNumOfGems') {
             val[0] = inputValues(idOfElm);
-        }
-        else if(idOfElm==='avlNumOfGems')
-        {
+        } else if (idOfElm === 'avlNumOfGems') {
             val[1] = inputValues(idOfElm);
-        }
-  
-        else if(idOfElm ==='gemMineLevel')
-        {
+        } else if (idOfElm === 'gemMineLevel') {
             val[2] = inputValues(idOfElm)
-        }
-        
-        else if(idOfElm === 'clockTowerLevel')
-        {
+        } else if (idOfElm === 'clockTowerLevel') {
             val[3] = inputValues(idOfElm);
         }
         //console.log(val)
-        
-    }
-}
-);
 
-document.getElementById('calcBtn').addEventListener('click',function(){
+    }
+});
+
+document.getElementById('calcBtn').addEventListener('click', function() {
     console.log(val);
     mainFunction(val);
 });
