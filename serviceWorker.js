@@ -1,11 +1,14 @@
 const CACHE_NAME = "pwa-cache-v1";
 const ASSETS = [
- "./",
+  "./",
   "./index.html",
-  "./styles.css",
-  "./app.js",
-  "./fonts/inter-regular.woff2",
-  "./fonts/inter-bold.woff2"
+  "./style.css",
+  "./script.js",
+  "./fonts/SourceCodePro-Regular.ttf",
+  "./fonts/Clash-Bold.ttf",
+  "./fonts/Clash-Light.ttf",
+  "./fonts/YouBlockheadOpen.ttf",
+
 
 ];
 
