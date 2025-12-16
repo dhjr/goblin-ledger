@@ -1,9 +1,12 @@
 const CACHE_NAME = "pwa-cache-v1";
 const ASSETS = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/script.js"
+ "./",
+  "./index.html",
+  "./styles.css",
+  "./app.js",
+  "./fonts/inter-regular.woff2",
+  "./fonts/inter-bold.woff2"
+
 ];
 
 self.addEventListener("install", event => {
