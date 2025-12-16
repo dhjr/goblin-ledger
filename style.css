@@ -1,355 +1,300 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
-@font-face 
-{
-    font-family: 'Clash font';
-    src:url('./fonts/Clash-Bold.ttf');
-
+@font-face {
+  font-family: "Clash font";
+  src: url("./fonts/Clash-Bold.ttf");
 }
 
-@font-face
-{
-    font-family: 'Clash light';
-    src: url('./fonts/Clash-Light.ttf'); 
+@font-face {
+  font-family: "Clash light";
+  src: url("./fonts/Clash-Light.ttf");
 }
-*
-{
-    margin: 0rem;
-    padding: 0rem;
+* {
+  margin: 0rem;
+  padding: 0rem;
 }
 
-body
-{
-    background-image: url(./resource/background-mobile.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-
-
+body {
+  background-image: url(./resources/background-mobile.webp);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
-.container
-{
-    margin: auto;
-    padding: 0.25rem;
-    margin-top: 2rem;
-    min-width: fit-content;
-    width: 90%;
-    height: fit-content;
-    background-color: rgba(255, 255, 255, 0.349);
-    border-radius: 2rem;
-    backdrop-filter: blur(10px);
+.container {
+  margin: auto;
+  padding: 0.25rem;
+  margin-top: 2rem;
+  min-width: fit-content;
+  width: 90%;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.349);
+  border-radius: 2rem;
+  backdrop-filter: blur(10px);
 }
 
-.inputs
-{
-  margin-top: .2rem;
+.inputs {
+  margin-top: 0.2rem;
   padding: 0.2rem;
   height: 1.25rem;
   border: none;
-  border-radius: .25rem;
-  font-family:Arial, Helvetica, sans-serif;
+  border-radius: 0.25rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.title
-{
-    text-align: center;
-    font-size: 1.25rem;
-    margin: 1.25rem;
-    font-family:'Clash font';
-    color: rgb(255, 224, 22);
-}
-
-.parameters
-{
-    margin: auto;
-    display: flex;
-    flex-direction:column ;
-    flex-wrap: wrap;
-    align-items: stretch;
-    max-width: 80%;
-
+.title {
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 1.25rem;
+  font-family: "Clash font";
+  color: rgb(255, 224, 22);
 }
 
-.parameter
-{
-    font-family:'Clash font';
-    font-size: 0.75rem;
-    color: rgb(255, 255, 255);   
+.parameters {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 80%;
 }
 
-.err
-{
-    visibility: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
-
+.parameter {
+  font-family: "Clash font";
+  font-size: 0.75rem;
+  color: rgb(255, 255, 255);
 }
 
-#calcBtn
-{
-    margin:auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    width: 7rem;
-    height: 3rem;
-    font-family: 'Clash font';
-    font-size: medium;
-    background-color: rgb(255, 179, 3); 
-    border: 0.25rem solid rgba(255, 255, 255, 0.518);
-    border-radius: 1.25rem;
+.err {
+  visibility: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
 }
 
-#calcBtn:active
-{
+#calcBtn {
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 7rem;
+  height: 3rem;
+  font-family: "Clash font";
+  font-size: medium;
+  background-color: rgb(255, 179, 3);
+  border: 0.25rem solid rgba(255, 255, 255, 0.518);
+  border-radius: 1.25rem;
+}
+
+#calcBtn:active {
   scale: 0.95;
 }
 
-
-.switch
-{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: stretch;
+.switch {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: stretch;
 }
 
-.switchText
-{
-    font-family:'Clash font';
-    font-size: 0.75rem;
-    color: rgb(255, 255, 255);
+.switchText {
+  font-family: "Clash font";
+  font-size: 0.75rem;
+  color: rgb(255, 255, 255);
 }
 
-#switch1
-{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    min-width: 15rem;
+#switch1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 15rem;
 }
 
-#switch2
-{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+#switch2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
-
 
 /* The switch - the box around the slider */
-.toggleSwitch
-{
-    position: relative;
-    display: inline-block;
-    width: 3.5rem;
-    height: 2rem;
-    margin-bottom: .5rem;
-    margin-left:0.5rem ;
+.toggleSwitch {
+  position: relative;
+  display: inline-block;
+  width: 3.5rem;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
 }
-  
-  /* Hide default HTML checkbox */
-.toggleSwitch input
-{
-    opacity: 0;
-    width: 0;
-    height: 0;
+
+/* Hide default HTML checkbox */
+.toggleSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 /* The slider */
-.slider
-{
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.slider:before 
-{
-    position: absolute;
-    content: "";
-    height: 1.5rem;
-    width: 1.5rem;
-    left: 0.2rem;
-    bottom: 0.25rem;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 0.2rem;
+  bottom: 0.25rem;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-input:checked + .slider
-{
-    background-color: #2196F3;
+input:checked + .slider {
+  background-color: #2196f3;
 }
 
-input:focus + .slider 
-{
-    box-shadow: 0 0 1px #2196F3;
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked + .slider:before 
-{
-    -webkit-transform: translateX(1.625rem);
-    -ms-transform: translateX(1.625rem);
-    transform: translateX(1.625rem);
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.625rem);
+  -ms-transform: translateX(1.625rem);
+  transform: translateX(1.625rem);
 }
 
 /* Rounded sliders */
-.slider.round 
-{
-    border-radius: 2.125rem ;
+.slider.round {
+  border-radius: 2.125rem;
 }
 
-.slider.round:before 
-{
-    border-radius: 50%;
+.slider.round:before {
+  border-radius: 50%;
 }
 
-#counter
-{
-    display: block;
-    position: relative;
-    left: 3.5rem;
-    bottom: 2.5rem;
+#counter {
+  display: block;
+  position: relative;
+  left: 3.5rem;
+  bottom: 2.5rem;
 }
 
-.timeTaken
-{
-    margin: auto;
-    font-family:'Clash font';
-    font-size: 1rem;
-    width: fit-content;
-    max-width: 40rem;
-    visibility:hidden;
-    height: 5rem;
+.timeTaken {
+  margin: auto;
+  font-family: "Clash font";
+  font-size: 1rem;
+  width: fit-content;
+  max-width: 40rem;
+  visibility: hidden;
+  height: 5rem;
 
-    display: flex;
-    flex-direction:column ;
-    color: rgb(255, 255, 255);
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  align-items: flex-start;
 }
 
-#timeTakenWithoutGB
-{
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+#timeTakenWithoutGB {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-#timeTakenWithGb
-{
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+#timeTakenWithGb {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-
-
-.gemBoxIcon
-{
-    margin: 1rem;
-    padding: 0rem;
-    width: 3rem;
+.gemBoxIcon {
+  margin: 1rem;
+  padding: 0rem;
+  width: 3rem;
 }
 
-#gemBox
-{
-    padding-top: 1rem;
+#gemBox {
+  padding-top: 1rem;
 }
-#gemBox:hover
-{
-    border:0.063rem solid white;
-    border-radius: 0.63rem;
-    background-color: gray;
-    scale: 1.15;
+#gemBox:hover {
+  border: 0.063rem solid white;
+  border-radius: 0.63rem;
+  background-color: gray;
+  scale: 1.15;
 }
 
-#gemBox:active
-{
-    scale: 0.97;
+#gemBox:active {
+  scale: 0.97;
 }
 
-.timeTakenText
-{
-    margin-left: 0.75rem;
+.timeTakenText {
+  margin-left: 0.75rem;
 }
 
-
-
-.tips
-{
-    font-family:'Clash light';
-    font-size: 0.75rem;
-    color: rgb(255, 255, 255);
-    margin-bottom: 1.5rem;
-     
+.tips {
+  font-family: "Clash light";
+  font-size: 0.75rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1.5rem;
 }
 
-.footer
-{
-    margin: auto;
-    bottom: 0;
-    margin-top: 5rem;
-    width: 100%;
-    text-align: center;
-    font-family: 'Source Code Pro';
-    color: rgb(120, 120, 120);
+.footer {
+  margin: auto;
+  bottom: 0;
+  margin-top: 5rem;
+  width: 100%;
+  text-align: center;
+  font-family: "Source Code Pro";
+  color: rgb(120, 120, 120);
 }
 
-.links
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.icon 
-{
-    margin:.5rem;
-    width: 1rem;
-    height: 1rem;
+.icon {
+  margin: 0.5rem;
+  width: 1rem;
+  height: 1rem;
 }
 
-.url
-{
-    font-family: 'Source Code Pro';
-    position: relative;
-    text-decoration: none;
-    bottom: 1rem;
-    left: 1rem;
-    font-size: 1.25rem;
-    color: rgb(40, 40, 40);
+.url {
+  font-family: "Source Code Pro";
+  position: relative;
+  text-decoration: none;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 1.25rem;
+  color: rgb(40, 40, 40);
 }
 
-@media (width>=600px) 
-{
-body
-{
-    background-image: url('./resource/background.jpg');
-}
+@media (width>=600px) {
+  body {
+    background-image: url("./resources/background.webp");
+  }
 
-.title
-{
+  .title {
     font-size: 1.75rem;
     margin: 2rem;
-}
+  }
 
-.footer
-{
+  .footer {
     margin-top: 6rem;
-}
+  }
 }
