@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dhjr.github.io/COC-gem-calculator/sitemap.xml
