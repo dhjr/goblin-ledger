@@ -145,7 +145,7 @@ function gemBoxCounter(values)
         {
             count++;
             document.getElementById('counter').innerHTML=`x${count}`;
-            resultTag.innerHTML = `Time Taken:0 days`;
+            resultTag.innerHTML = `0 days`;
             gemBox.removeEventListener('click' , newTime);
         }
         else
@@ -154,7 +154,7 @@ function gemBoxCounter(values)
             document.getElementById('counter').innerHTML=`x${count}`;
             let reqdTime =reqdTimeCalculate(values, reqdGems, newAvlGems);
             let result = obtainTime(reqdTime);
-            resultTag.innerHTML = `Time Taken: ${result[0]}d ${result[1]}h ${result[2]}m ${result[3]}s`;  
+            resultTag.innerHTML = `${result[0]}d ${result[1]}h ${result[2]}m ${result[3]}s`;  
         }
     }
 
@@ -242,7 +242,7 @@ function mainFunction(val)
         let reqdGems = val[0];
         let avlGems = val[1];
         document.getElementById('counter').innerHTML=`x0`;
-        document.getElementById('timeTakenText2').innerHTML = 'Time Taken:';
+        document.getElementById('timeTakenText2').innerHTML = '';
         
         let elements = document.querySelectorAll('.timeTaken');
         elements.forEach(function(element) 
@@ -252,7 +252,7 @@ function mainFunction(val)
 
         if(reqdGems <= avlGems) 
             {
-                resultTag.innerHTML = ("Time Taken:0 days");   
+                resultTag.innerHTML = ("0 days");   
                 document.getElementById('timeTakenWithGb').style.display = 'none';
             }
             else
@@ -262,11 +262,11 @@ function mainFunction(val)
 
                 if((result[0] === Infinity) || (Number.isNaN(result[0])))
                 {
-                    resultTag.innerHTML =`Time Taken: Infinite d`; 
+                    resultTag.innerHTML =`Infinite d`; 
                 }
                 else
                 {
-                    resultTag.innerHTML =`Time Taken: ${result[0]}d ${result[1]}h ${result[2]}m ${result[3]}s`;
+                    resultTag.innerHTML =`${result[0]}d ${result[1]}h ${result[2]}m ${result[3]}s`;
                 }
                 document.getElementById('timeTakenWithGb').style.display = 'flex';
                 gemBoxCounter(val);

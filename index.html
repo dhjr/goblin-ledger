@@ -24,6 +24,7 @@
     
     <link rel="canonical" href="https://dhjr.github.io/COC-gem-calculator/">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
@@ -62,28 +63,14 @@
 
         <div class = 'switch'>
 
-            <div id="switch1" >
-
-                <p class="switchText">Clear Home Obstacles?</p>
-                <div class = 'toggleSwitch' >
-                    <label class="switch">
-                        <input type="checkbox" id="homeBaseObstacleToggle" >
-                        <span class="slider round"></span>
-                    </label>  
-                </div>
-
+            <div class="checkbox-group">
+                <span class="switchText">Clear Home Obstacles?</span>
+                <input type="checkbox" id="homeBaseObstacleToggle" class="custom-checkbox">
             </div>
             
-            <div id="switch2"  >
-
-                <p class="switchText">Clear Builder Obstacles?</p>
-                <div class = 'toggleSwitch'>
-                    <label class="switch">
-                        <input type="checkbox" id="builderBaseObstacleToggle">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-
+            <div class="checkbox-group">
+                <span class="switchText">Clear Builder Obstacles?</span>
+                <input type="checkbox" id="builderBaseObstacleToggle" class="custom-checkbox">
             </div>
             
         </div>
@@ -93,18 +80,24 @@
 </div>
 
     <div class="timeTaken">
-        <div id="timeTakenWithoutGB">
+        <div id="timeTakenWithoutGB" class="result-item">
             <img class= 'gemBoxIcon' id ="crossedGemBox" src="./resources/crossedGemBox.webp" alt="Gem Box icon">
-            <p class = 'timeTakenText' id="timeTakenText1">Time Taken</p>
+            <div class="time-display">
+                <img src="./resources/cocClock.webp" class="timeIcon" alt="Clock Icon">
+                <span id="timeTakenText1"></span>
+            </div>
         </div>
         
-        <div id="timeTakenWithGb">
+        <div id="timeTakenWithGb" class="result-item">
             <div>
                 
                 <img class="gemBoxIcon" id ="gemBox" src="./resources/gemBox.webp" alt="Gem Box icon">
                 <p id="counter">x0</p>
             </div>
-            <p class = 'timeTakenText'  id="timeTakenText2">Time Taken</p>
+            <div class="time-display">
+                <img src="./resources/cocClock.webp" class="timeIcon" alt="Clock Icon">
+                <span id="timeTakenText2"></span>
+            </div>
         </div>
         
     </div>
@@ -113,13 +106,15 @@
     <div class="footer">
         <span>Made with ❤️ by Dhananjay R</span>
         <div class="links">
-            <a href="https://github.com/dhjr">
+            <a href="https://github.com/dhjr" target="_blank">
                 <img class = 'icon' src="./resources/github.webp" alt="GitHub logo">
             </a>
             
-            <a href="https://www.linkedin.com/in/dhananjayr/">
+            <a href="https://www.linkedin.com/in/dhananjayr/" target="_blank">
                 <img class = 'icon' src="./resources/linkedin.webp" alt="LinkedIn logo">
             </a>
+
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
