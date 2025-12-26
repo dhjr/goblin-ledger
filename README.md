@@ -38,8 +38,8 @@ Just visit the site.
 2. **Open `index.html` in your web browser.**
 
 3. **Start calculating:**
-   - Enter the amount of resources or upgrade time.
-   - View the number of gems required to complete your action in-game.
+   - Enter various inputs such as available and required gems, clock tower and gem mine level etc..
+   - Estimate an approximate amount of time required to obtain said quantity of gems.
 
 
 ## Contributing
