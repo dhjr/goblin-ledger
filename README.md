@@ -1,13 +1,13 @@
 # The Goblin Ledger
 
-A web-based calculator for **Clash of Clans** players to estimate the number of gems required to purchase resources, finish upgrades, or speed up progress in the game.
+A progressive web app for **Clash of Clans** players to estimate the time required to obtain a fixed amount of gems in-game without any in-app-purchases.
 
-Hosted at: [The Goblin Ledger](https://dhjr.github.io/COC-gem-calculator/)
+Hosted at: [The Goblin Ledger](https://dhjr.github.io/goblin-ledger/)
 
 ## Features
 
-- **Resource to Gem Calculator**: Determine how many gems are needed to buy various resources (elixir, gold, dark elixir).
-- **Time to Gem Calculator**: Calculate the number of gems needed to finish upgrades or timers instantly.
+- **Resource to Gem Calculator**: Determine amount of time needed to obtain any number of gems, based on various factors.
+- **Progressive Web App**: Installable as a web-app from [The Goblin Ledger](https://dhjr.github.io/goblin-ledger/)
 - **User-Friendly Interface**: Intuitive, responsive design for easy use on desktop and mobile.
 - **Game-Themed Styling**: Styled with Clash of Clans visuals for immersive experience.
 
@@ -25,12 +25,14 @@ Hosted at: [The Goblin Ledger](https://dhjr.github.io/COC-gem-calculator/)
 ### Prerequisites
 
 No installation or dependencies required. This is a pure HTML/CSS/JS web app.
+Now installable offline!
+Just visit the site.
 
 ### Usage
 
 1. **Clone or download the repository:**
    ```sh
-   git clone https://github.com/dhjr/COC-gem-calculator.git
+   git clone https://github.com/dhjr/goblin-ledger.git
    ```
 
 2. **Open `index.html` in your web browser.**
@@ -39,16 +41,11 @@ No installation or dependencies required. This is a pure HTML/CSS/JS web app.
    - Enter the amount of resources or upgrade time.
    - View the number of gems required to complete your action in-game.
 
-### Online Version
-
-No need to install! Use it directly at:  
-[https://dhjr.github.io/COC-gem-calculator/](https://dhjr.github.io/COC-gem-calculator/)
 
 ## Contributing
 
 Pull requests are welcome! Please open an issue to discuss changes or suggestions.
 
-## License
 
 This project currently does not specify a license.
 
