@@ -1,8 +1,8 @@
-# COC Gem Calculator
+# The Goblin Ledger
 
 A web-based calculator for **Clash of Clans** players to estimate the number of gems required to purchase resources, finish upgrades, or speed up progress in the game.
 
-Hosted at: [COC Gem Calculator](https://dhjr.github.io/COC-gem-calculator/)
+Hosted at: [The Goblin Ledger](https://dhjr.github.io/COC-gem-calculator/)
 
 ## Features
 
